@@ -9,12 +9,24 @@
   --body-font: 'Roboto', Arial, Helvetica, sans-serif;
   --embellish-font: 'Alegreya', Georgia, serif;
   --logo-green: #495e57;
+  /* --accent-green: #738384; */
+  --accent-green: #485e56;
+  /* --off-white: #fcfbfb; */
+  /* --off-white: #f9f9f9; */
+  /* --off-white: #f7f7f7; */
+  /* --off-white: #f3f4f4; */
+  /* --off-white: #ecefed;  */
+  /* --off-white: #e5e3df;  */
 
+  --off-white: #e5dcdc; 
+
+  --max-width: 1280px;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  background: var(--off-white);
 }
 
 ul, 
@@ -34,18 +46,24 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--off-white);
 }
 
-.header__logo {
-  width: 20rem;
+.header__home-button {
   text-align: center;
+} 
+
+.header__logo {
+  max-width: 20rem;
+  width: 60%;
 }
 
 .header__menu-toggle {
   position: absolute;
   right: 2rem;
-  top: 2rem;
+  top: 2.25rem;
   cursor: pointer;
+  height: 1.25rem;
 }
 
 .nav {
@@ -57,24 +75,29 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: red;
+  /* background-color: var(--logo-green); */
+  background-color: var(--accent-green);
+  transition: 850ms ease;
 }
 
 .nav.show {
   right: 0;
+  transition: 450ms ease-out;
 }
 
 .nav__menu-toggle {
   position: absolute;
-  top: 2rem;
+  top: 2.25rem;
   cursor: pointer;
+  height: 2rem;
+  height: 1.25rem;
 }
 
 
 .nav__nav-bar {
   display: flex;
   flex-direction: column;
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
   width: 100%;
   justify-content: space-between;
   padding-inline: 2rem;
@@ -83,11 +106,17 @@ a {
 .nav__options {
   padding-block: 1rem;
   text-align: center;
-  color: #fff;
+  color: var(--off-white);
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+
+.nav__options:hover {
+  font-weight: bold;
 }
 
 .main {
-  outline: 4px dotted #333;
+  /* outline: 4px dotted #333; */
   background-color: orange;
   display: flex;
   flex-direction: column;
@@ -96,10 +125,10 @@ a {
 
 .main__banner {
   width: 100%;
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
   flex-grow: 1;
   padding: 1rem;
-  background-color: green;
+  /* background-color: green; */
 }
 
 .banner__heading {
@@ -108,7 +137,7 @@ a {
 
 .main__card {
   height: 10rem;
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 }
 
 .card__header {
@@ -117,19 +146,19 @@ a {
 
 .footer {
   width: 100%;
-  outline: 2px solid blue;
-  /* background-color: pink; */
+  border-top: 2px solid var(--accent-green);
+  /* color: var(--off-white); */
+  /* background-color: var(--accent-green); */
+
 }
 
-/* .footer__content {
+.footer__content {
   padding: 1rem;
-} */
+}
 
 .footer__left, 
 .footer__right {
-  /* outline: 2px solid red; */
   text-align: center;
-  /* padding-block: 1rem; */
 }
 
 
@@ -139,6 +168,8 @@ a {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--logo-green); 
+  /* color: var(--off-white); */
+  margin-top: 0.5rem;
 }
 
 .footer__logo {
@@ -174,8 +205,12 @@ a {
     height: 4rem;
     margin-top: 6rem;
     font-weight: 500;
-    letter-spacing: 5px;
     font-size: 1.2rem;
+    transition: 0;
+  }
+  
+  .nav.show {
+    transition: 0;
   }
 
   .nav__menu-toggle {
@@ -188,7 +223,7 @@ a {
 
   .nav__nav-bar {
     flex-direction: row;
-    outline: 2px solid green;
+    /* outline: 2px solid green; */
     width: 100%;
     justify-content: center;
     gap: 10%;
@@ -200,6 +235,8 @@ a {
   
   .main {
     min-height: calc(100vh - (14rem));
+    max-width: var(--max-width);
+    margin-inline: auto;
   }
   
   .main__banner {
@@ -222,9 +259,14 @@ a {
     justify-content: center;
     gap: 2rem;
   }
-
+  
   .main__card {
+    border: 2px solid red;
     width: 30%;
+  }
+
+  .footer {
+
   }
 
   .footer__content {
@@ -233,10 +275,21 @@ a {
     height: 4rem;
     gap: 2rem;
     align-items: center;
+    max-width: var(--max-width);
+    margin-inline: auto;
   }
   .footer__left, 
   .footer__right {
     width: 50%;
+  }
+
+  .footer__right {
+    margin-top: 0;
+  }
+
+  .footer__copyright {
+    /* display: none; */
+    margin-bottom: 0.5rem;
   }
 }
 
