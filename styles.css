@@ -6,31 +6,31 @@
 
 
 :root {
-  --body-font: var((--'Roboto', Arial, Helvetica, sans-serif ));
+  --body-font: 'Roboto', Arial, Helvetica, sans-serif;
+  --embellish-font: 'Alegreya', Georgia, serif;
+  --logo-green: #495e57;
+
 }
 
 body {
   display: flex;
-  font-family: var(--body-font);
   flex-direction: column;
 }
 
 ul, 
 ol {
   list-style: none;
+  font-family: var(--body-font);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  font-family: inherit;
 }
 
 .header {
   height: 6rem;
-  /* 
-  padding-block: 1rem;
-  background-color: yellow;
-  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +91,7 @@ a {
   background-color: orange;
   display: flex;
   flex-direction: column;
+  font-family: var(--body-font);
 }
 
 .main__banner {
@@ -117,18 +118,32 @@ a {
 .footer {
   width: 100%;
   outline: 2px solid blue;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
-.footer__content {
-  /* padding: 1rem; */
-}
+/* .footer__content {
+  padding: 1rem;
+} */
 
 .footer__left, 
 .footer__right {
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   text-align: center;
-  padding-block: 1rem;
+  /* padding-block: 1rem; */
+}
+
+
+.footer__copyright {
+  font-family: var(--body-font);
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--logo-green); 
+}
+
+.footer__logo {
+  width: 14rem;
+  margin-top: 0.4rem;
 }
 
 /* Breakpoints */
@@ -158,7 +173,6 @@ a {
     width: 100%;
     height: 4rem;
     margin-top: 6rem;
-    font-family: 'Roboto';
     font-weight: 500;
     letter-spacing: 5px;
     font-size: 1.2rem;
