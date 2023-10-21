@@ -1,13 +1,15 @@
 *, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-
 :root {
+  /* typography */
   --body-font: 'Roboto', Arial, Helvetica, sans-serif;
   --embellish-font: 'Alegreya', Georgia, serif;
+
+  /*colors */
   --logo-green: #495e57;
   /* --accent-green: #738384; */
   --accent-green: #485e56;
@@ -20,33 +22,44 @@
 
   --off-white: #e5dcdc; 
 
+  --main-backing-color: #ddd7cc;
+  --main-backing-color: #dfdad3;
+  --main-backing-color: #cfaf7c;
+  --main-backing-color: #c8baa4;
+  --main-backing-color: #c1c0bc;
+  --main-backing-color: #c1c0bc;
+  --main-backing-color: #9fa2a2;
+  /* --flat-black: #333333; */
+  --flat-black: #2C3E50;
+
   --max-width: 1280px;
 }
 
 body {
+  background: var(--off-white);
   display: flex;
   flex-direction: column;
-  background: var(--off-white);
+  color: var(--flat-black);
 }
 
 ul, 
 ol {
-  list-style: none;
   font-family: var(--body-font);
+  list-style: none;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
   font-family: inherit;
+  text-decoration: none;
 }
 
 .header {
-  height: 6rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
   background: var(--off-white);
+  display: flex;
+  height: 6rem;
+  justify-content: center;
 }
 
 .header__home-button {
@@ -59,25 +72,25 @@ a {
 }
 
 .header__menu-toggle {
+  cursor: pointer;
+  height: 1.25rem;
   position: absolute;
   right: 2rem;
   top: 2.25rem;
-  cursor: pointer;
-  height: 1.25rem;
 }
 
 .nav {
-  position: fixed;
-  height: 100%;
-  width: 60%;
-  right: -60%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  /* background-color: var(--logo-green); */
   background-color: var(--accent-green);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  right: -60%;
+  /* background-color: var(--logo-green); */
   transition: 850ms ease;
+  width: 60%;
 }
 
 .nav.show {
@@ -86,11 +99,10 @@ a {
 }
 
 .nav__menu-toggle {
+  cursor: pointer;
+  height: 1.25rem;
   position: absolute;
   top: 2.25rem;
-  cursor: pointer;
-  height: 2rem;
-  height: 1.25rem;
 }
 
 
@@ -98,17 +110,17 @@ a {
   display: flex;
   flex-direction: column;
   /* outline: 2px solid green; */
-  width: 100%;
   justify-content: space-between;
   padding-inline: 2rem;
+  width: 100%;
 }
 
 .nav__options {
+  color: var(--off-white);
+  font-weight: 400;
+  letter-spacing: 6px;
   padding-block: 1rem;
   text-align: center;
-  color: var(--off-white);
-  letter-spacing: 6px;
-  font-weight: 400;
 }
 
 .nav__options:hover {
@@ -116,18 +128,17 @@ a {
 }
 
 .main {
-  /* outline: 4px dotted #333; */
-  background-color: orange;
+  background-color: var(--main-backing-color);
   display: flex;
   flex-direction: column;
   font-family: var(--body-font);
 }
 
 .main__banner {
-  width: 100%;
   /* outline: 2px solid blue; */
   flex-grow: 1;
   padding: 1rem;
+  width: 100%;
   /* background-color: green; */
 }
 
@@ -135,18 +146,37 @@ a {
   text-align: center;
 }
 
+.main__cards {
+  background-color: var(--main-backing-color);
+}
+
 .main__card {
-  height: 10rem;
-  /* outline: 2px solid green; */
+  margin-block: 2rem;
+}
+
+.card__img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  height: 22rem;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .card__header {
   text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card__info {
+  line-height: 2;
+  margin-block: 1rem;
 }
 
 .footer {
-  width: 100%;
   border-top: 2px solid var(--accent-green);
+  width: 100%;
   /* color: var(--off-white); */
   /* background-color: var(--accent-green); */
 
@@ -163,32 +193,32 @@ a {
 
 
 .footer__copyright {
+  color: var(--logo-green); 
   font-family: var(--body-font);
-  letter-spacing: 2px;
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--logo-green); 
+  letter-spacing: 2px;
   /* color: var(--off-white); */
   margin-top: 0.5rem;
 }
 
 .footer__logo {
-  width: 14rem;
   margin-top: 0.4rem;
+  width: 14rem;
 }
 
 /* Breakpoints */
 @media (min-width: 768px) {
   .header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 6rem;
-    padding-block: 1rem;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+    left: 0;
+    padding-block: 1rem;
+    position: fixed;
+    right: 0;
+    /* background-color: yellow; */
   }
 
   .header__logo {
@@ -200,13 +230,13 @@ a {
   }
 
   .nav {
-    position: static;
-    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
     height: 4rem;
     margin-top: 6rem;
-    font-weight: 500;
-    font-size: 1.2rem;
+    position: static;
     transition: 0;
+    width: 100%;
   }
   
   .nav.show {
@@ -224,29 +254,24 @@ a {
   .nav__nav-bar {
     flex-direction: row;
     /* outline: 2px solid green; */
-    width: 100%;
-    justify-content: center;
     gap: 10%;
+    justify-content: center;
     padding-inline: 4rem;
+    width: 100%;
   }
   .nav__options {
 
   }
   
   .main {
-    min-height: calc(100vh - (14rem));
-    max-width: var(--max-width);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     margin-inline: auto;
+    max-width: var(--max-width);
+    min-height: calc(100vh - (14rem));
   }
   
   .main__banner {
     /* height: 30rem; */
-  }
-
-  .main__content {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 70% 1fr;
-    grid-gap: 2rem;
   }
 
   .main__banner {
@@ -254,15 +279,20 @@ a {
   }
 
   .main__cards {
-    background-color: blue;
     display: flex;
+    /* gap: 2rem; */
+    gap: 2%;
     justify-content: center;
-    gap: 2rem;
   }
   
   .main__card {
-    border: 2px solid red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
     width: 30%;
+    padding: 1rem;
+  }
+
+  .card__img {
   }
 
   .footer {
@@ -270,13 +300,13 @@ a {
   }
 
   .footer__content {
-    justify-content: space-between;
-    display: flex;
-    height: 4rem;
-    gap: 2rem;
     align-items: center;
-    max-width: var(--max-width);
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    height: 4rem;
     margin-inline: auto;
+    max-width: var(--max-width);
   }
   .footer__left, 
   .footer__right {
