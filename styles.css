@@ -37,9 +37,9 @@
 
 body {
   background: var(--off-white);
+  color: var(--flat-black);
   display: flex;
   flex-direction: column;
-  color: var(--flat-black);
 }
 
 ul, 
@@ -89,9 +89,9 @@ a {
   justify-content: center;
   position: fixed;
   right: -60%;
-  /* background-color: var(--logo-green); */
   transition: 850ms ease;
   width: 60%;
+  z-index: 2
 }
 
 .nav.show {
@@ -135,7 +135,7 @@ a {
 
 .main__banner {
   flex-grow: 1;
-  padding: 2rem;
+  padding: 1.25rem;
   width: 100%;
 }
 
@@ -144,22 +144,23 @@ a {
 }
 
 .banner__img {
+  border-radius: 15px;
+  height: 15rem;
   max-width: 100%;
-  width: 100%;
   object-fit: cover;
   object-position: center center;
-  border-radius: 15px;
-  height: 35rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .banner__heading {
-  position: absolute;
-  font-size: 8vw;
   color: var(--accent-green);
-  letter-spacing: 2px;
-  font-weight: 500;
-  z-index: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 8vw;
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: absolute;
+  z-index: 0;
 }
 
 .banner__heading--1 {
@@ -187,7 +188,7 @@ a {
   text-align: center;
   margin-top: 3rem;
   line-height: 2;
-  font-size: 3rem;
+  font-size: max(4vw, 2.2rem);
   font-weight: 400;
   width: 80%;
   text-align: center;
@@ -201,41 +202,51 @@ a {
   left: 3rem;
 }
 
+.main {
+
+}
+
 .main__cards {
   background-color: var(--main-backing-color);
-  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
 }
 
 .main__card {
-  margin-block: 2rem;
-}
-
-.card__img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  height: 22rem;
   border-radius: 15px;
-  object-fit: cover;
-  object-position: center center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin-block: 2rem;
+  padding: 1rem;
+  width: 95%;
 }
 
 .card__header {
   text-align: center;
   margin-bottom: 0.5rem;
+  font-size: max(2vw, 1.75rem);
+}
+
+.card__img {
+  height: 22rem;
+  border-radius: 15px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
 }
 
 .card__info {
+  font-size: max(1.5vw, 1.5rem);
   line-height: 2;
   margin-block: 1rem;
+  padding-inline: 1rem;
 }
 
 .footer {
   border-top: 2px solid var(--accent-green);
   width: 100%;
-  /* color: var(--off-white); */
-  /* background-color: var(--accent-green); */
-
 }
 
 .footer__content {
@@ -274,7 +285,6 @@ a {
     padding-block: 1rem;
     position: fixed;
     right: 0;
-    /* background-color: yellow; */
   }
 
   .header__logo {
@@ -286,17 +296,15 @@ a {
   }
 
   .nav {
-    font-size: 1.2rem;
-    font-weight: 500;
     height: 4rem;
     margin-top: 6rem;
     position: static;
-    transition: 0;
     width: 100%;
+    z-index: 0;
   }
   
   .nav.show {
-    transition: 0;
+    /* transition: 0; */
   }
 
   .nav__menu-toggle {
@@ -309,7 +317,6 @@ a {
 
   .nav__nav-bar {
     flex-direction: row;
-    /* outline: 2px solid green; */
     gap: 10%;
     justify-content: center;
     padding-inline: 4rem;
@@ -328,24 +335,16 @@ a {
   
   .main__banner {
     /* height: 30rem; */
+    padding: 2rem;
   }
 
   .main__banner {
     grid-template-rows: 50% 1fr;
   }
 
-  .main__cards {
-    display: flex;
-    /* gap: 2rem; */
-    /* gap: 2%; */
-    justify-content: space-between;
-  }
-  
-  .main__card {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
-    width: 32%;
-    padding: 1rem;
+  .banner__img {
+    /* height: 35rem; */
+    margin-top: 0;
   }
 
   .card__img {
@@ -379,6 +378,28 @@ a {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1080px) {
+  .banner__img {
+    height: 25rem;
+  }
 
+  .main__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 2rem;
+  }
+    
+  .main__card {
+    width: 32%;
+    padding: 1rem;
+  }
+
+
+}
+
+@media (min-width: 1280px) {
+  .banner__img {
+    height: 35rem;
+  }
 }
