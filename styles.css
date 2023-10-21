@@ -154,14 +154,44 @@ a {
 
 .banner__heading {
   position: absolute;
-  font-size: 5rem;
+  font-size: 8vw;
   color: var(--accent-green);
   letter-spacing: 2px;
   font-weight: 500;
+  z-index: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner__heading--1 {
   top: 2rem;
   left: 4rem;
-  z-index: 0;
-  font-family: var(--embellish-font);
+}
+
+.banner__heading--2 {
+  left: 4rem;
+  top: 12rem;
+}
+
+.banner__heading--3 {
+  left: 16rem;
+  top: 23rem;
+}
+
+.banner__header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.banner__promo-text {
+  text-align: center;
+  margin-top: 3rem;
+  line-height: 2;
+  font-size: 3rem;
+  font-weight: 400;
+  width: 80%;
+  text-align: center;
+  margin-inline: auto;
 }
 
 .banner__logo {
@@ -290,7 +320,7 @@ a {
   }
   
   .main {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-inline: auto;
     max-width: var(--max-width);
     min-height: calc(100vh - (14rem));
