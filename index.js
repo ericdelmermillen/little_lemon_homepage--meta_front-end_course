@@ -4,17 +4,17 @@ const header = document.querySelector('.header');
 const headerMenuToggle = document.querySelector('.header__menu-toggle');
 const navMenuToggle = document.querySelector('.nav__menu-toggle');
 
-const navOptions = document.querySelectorAll(".nav__options")
+const navOptions = document.querySelectorAll(".nav__options");
 
 const windowWidth = window.innerWidth;
-let prevScrollpos = window.scrollY;
+let prevScrollPos = window.scrollY;
 
 headerMenuToggle.addEventListener('click',() => {
   nav.classList.add('show');
   nav.style.top = "0";
 })
 
-navMenuToggle.addEventListener('click',() => nav.classList.remove('show'))
+navMenuToggle.addEventListener('click',() => nav.classList.remove('show'));
 
 navOptions.forEach(option => option.addEventListener('click',() => {
   nav.classList.remove('show');
@@ -31,27 +31,26 @@ window.onscroll = function() {
   nav.style.top = "0";
   
   if(innerWidth >= 768) {
-    if(prevScrollpos > currentScrollPos) {
+    if(prevScrollPos > currentScrollPos) {
       nav.style.top = "6rem";
       nav.classList.remove('show');
     } else if (innerWidth > 768){
       nav.style.top = "-4rem";
       nav.classList.remove('show');
     }
-    prevScrollpos = currentScrollPos;
+    prevScrollPos = currentScrollPos;
   } 
   else if(innerWidth < 768){
-    if(prevScrollpos > currentScrollPos) {
+    if(prevScrollPos > currentScrollPos) {
       header.style.top = "0";
     } else {
       header.style.top = "-6rem";
     }
-    prevScrollpos = currentScrollPos;
+    prevScrollPos = currentScrollPos;
   }
 }
 
-
-const year = document.getElementById('year')
+const year = document.getElementById('year');
   
 const thisYear = new Date().getFullYear();
 
