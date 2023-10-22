@@ -60,6 +60,8 @@ a {
   display: flex;
   height: 6rem;
   justify-content: center;
+  position: sticky;
+  transition: top 600ms ease;
   z-index: 2;
 }
 
@@ -90,7 +92,8 @@ a {
   position: fixed;
   right: -60%;
   top: 0;
-  transition: 850ms ease;
+  transition: top 0;
+  transition: right 850ms ease;
   width: 60%;
   z-index: 2
 }
@@ -303,6 +306,7 @@ a {
     transition: top 0.3s;
     width: 100%;
     top: -2rem;
+    transition: top 850ms ease;
     z-index: 1;
   }
   
