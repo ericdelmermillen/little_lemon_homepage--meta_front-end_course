@@ -4,7 +4,10 @@ const navMenuToggle = document.querySelector('.nav__menu-toggle');
 
 const navOptions = document.querySelectorAll(".nav__options")
 
-headerMenuToggle.addEventListener('click',() => nav.classList.add('show') )
+headerMenuToggle.addEventListener('click',() => {
+  nav.classList.add('show')
+  nav.style.top = "0";
+})
 
 navMenuToggle.addEventListener('click',() => nav.classList.remove('show'))
 
@@ -20,13 +23,23 @@ document.body.addEventListener("click", (event) => {
   }
 });
 
-
-
+const windowWidth = window.innerWidth;
 let prevScrollpos = window.scrollY;
+
 window.onscroll = function() {
   let currentScrollPos = window.scrollY;
-  prevScrollpos > currentScrollPos ? nav.style.top = "6rem" : nav.style.top = "-4rem";
-  prevScrollpos = currentScrollPos;
+  
+  if(innerWidth >= 768) {
+    if(prevScrollpos > currentScrollPos) {
+      nav.style.top = "6rem";
+    } else if (innerWidth > 768){
+      nav.style.top = "-4rem";
+    }
+    prevScrollpos = currentScrollPos;
+  } 
+  // else if(innerWidth < 768){
+    nav.style.top = "0";
+  // }
 }
 
 const year = document.getElementById('year')
