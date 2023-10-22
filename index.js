@@ -4,8 +4,11 @@ const navMenuToggle = document.querySelector('.nav__menu-toggle');
 
 const navOptions = document.querySelectorAll(".nav__options")
 
+const windowWidth = window.innerWidth;
+let prevScrollpos = window.scrollY;
+
 headerMenuToggle.addEventListener('click',() => {
-  nav.classList.add('show')
+  nav.classList.add('show');
   nav.style.top = "0";
 })
 
@@ -13,7 +16,7 @@ navMenuToggle.addEventListener('click',() => nav.classList.remove('show'))
 
 navOptions.forEach(option => option.addEventListener('click',() => {
   console.log(event.target);
-  nav.classList.remove('show')
+  nav.classList.remove('show');
 }))
 
 document.body.addEventListener("click", (event) => {
@@ -23,23 +26,22 @@ document.body.addEventListener("click", (event) => {
   }
 });
 
-const windowWidth = window.innerWidth;
-let prevScrollpos = window.scrollY;
-
 window.onscroll = function() {
   let currentScrollPos = window.scrollY;
   
   if(innerWidth >= 768) {
     if(prevScrollpos > currentScrollPos) {
       nav.style.top = "6rem";
+      nav.classList.remove('show');
     } else if (innerWidth > 768){
       nav.style.top = "-4rem";
+      nav.classList.remove('show');
     }
     prevScrollpos = currentScrollPos;
   } 
-  // else if(innerWidth < 768){
+  else if(innerWidth < 768){
     nav.style.top = "0";
-  // }
+  }
 }
 
 const year = document.getElementById('year')
