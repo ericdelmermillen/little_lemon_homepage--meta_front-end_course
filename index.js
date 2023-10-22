@@ -21,9 +21,16 @@ document.body.addEventListener("click", (event) => {
 });
 
 
+
+let prevScrollpos = window.scrollY;
+window.onscroll = function() {
+  let currentScrollPos = window.scrollY;
+  prevScrollpos > currentScrollPos ? nav.style.top = "6rem" : nav.style.top = "-4rem";
+  prevScrollpos = currentScrollPos;
+}
+
 const year = document.getElementById('year')
   
 const thisYear = new Date().getFullYear();
 
 year.innerText = thisYear;
-
