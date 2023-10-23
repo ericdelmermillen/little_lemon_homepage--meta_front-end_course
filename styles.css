@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100dvh;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   color: var(--flat-black-color);
   display: flex;
   flex-direction: column;
+  min-height: 100dvh;
 }
 
 ul, 
