@@ -21,7 +21,6 @@
 
 html {
   scroll-behavior: smooth;
-  height: web-kit-fill-available;
 }
 
 body {
@@ -29,7 +28,6 @@ body {
   color: var(--flat-black-color);
   display: flex;
   flex-direction: column;
-  height: web-kit-fill-available;
 }
 
 ul, 
@@ -76,16 +74,13 @@ a {
 .nav {
   align-items: center;
   background-color: var(--accent-green-color);
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   height: 100dvh;
-  height: calc(100vh - var(--browser-chrome-height)); 
   justify-content: center;
+  min-height: 100%;
   position: fixed;
-  position: sticky;
   right: -60%;
-  right: 0;
   top: 0;
   bottom: 0;
   transition: top 0;
@@ -96,7 +91,6 @@ a {
 
 .nav.show {
   right: 0;
-  transition: 450ms ease-out;
 }
 
 .nav__menu-toggle {
@@ -283,6 +277,7 @@ a {
     transition: top 850ms ease;
     top: -2rem;
     width: 100%;
+    min-height: auto;
     z-index: 1;
   }
 
