@@ -78,7 +78,7 @@ a {
   flex-direction: column;
   height: 100dvh;
   justify-content: center;
-  min-height: 100%;
+  min-height: 100dvh;
   position: fixed;
   right: -60%;
   top: 0;
