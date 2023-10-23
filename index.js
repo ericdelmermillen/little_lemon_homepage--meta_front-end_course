@@ -29,6 +29,8 @@ document.body.addEventListener("click", (event) => {
 window.onscroll = function() {
   let currentScrollPos = window.scrollY;
   nav.style.top = "0";
+  console.log("first")
+  // setSideNavHeight();
   
   if(innerWidth >= 768) {
     if(prevScrollPos > currentScrollPos) {
@@ -49,6 +51,17 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
   }
 }
+
+// function setSideNavHeight() {
+//   const browserChromeHeight = window.innerHeight - document.documentElement.clientHeight;
+//   document.documentElement.style.setProperty('--browser-chrome-height', `${browserChromeHeight}px`);
+// }
+
+// setSideNavHeight();
+
+// const browserChromeHeight = window.innerHeight - document.documentElement.clientHeight;
+// document.documentElement.style.setProperty('--browser-chrome-height', `${browserChromeHeight}px`);
+
 
 const year = document.getElementById('year');
   
