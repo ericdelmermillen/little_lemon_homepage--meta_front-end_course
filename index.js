@@ -50,6 +50,11 @@ window.onscroll = function() {
   }
 }
 
+
+const browserChromeHeight = window.innerHeight - document.documentElement.clientHeight;
+document.documentElement.style.setProperty('--browser-chrome-height', `${browserChromeHeight}px`);
+
+
 const year = document.getElementById('year');
   
 const thisYear = new Date().getFullYear();
