@@ -74,6 +74,7 @@ a {
 .nav {
   align-items: center;
   background-color: var(--accent-green-color);
+  background-color: red;
   display: flex;
   flex-direction: column;
   height: 100dvh;
