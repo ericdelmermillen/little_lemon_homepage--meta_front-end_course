@@ -11,88 +11,73 @@
       <title>Little Lemon Restaurant</title>
     </head>
     <body>
-      <header class="header">
-        <a class="header__home-button" href="/">
-          <img class="header__logo" src="./assets/lemon_text_logo_green.png" alt="little lemon restaurant logo">
-        </a>
-        <img class="header__menu-toggle" src="./assets/hamburger.png" alt="header menu toggle for slidding menu">
-      </header>
-      
-      <nav class="nav">
-        <img class="nav__menu-toggle" src="./assets/menu-x.png" alt="menu logo">
-        <ul class="nav__nav-bar">
-
-          <li class="nav__options">
-            <a href="#">HOME</a>
-          </li>
-
-          <li class="nav__options">
-            <a href="#">MENU</a>
-          </li>
-
-          <li class="nav__options">
-            <a href="#">ABOUT</a>
-          </li>
-
-          <li class="nav__options">
-            <a href="#">BOOK</a>
-          </li>
-
-        </ul>
-      </nav>
-
-      <main class="main">
-        <section class="main__banner">
-
-          <article class="banner__text">
-            <div class="banner__wrapper">
-              <img src="./assets/little_lemon_banner--no-logo.jpg" alt="A table with delicious mediteranean dishes" class="banner__img">
-              <img src="./assets/square_logo.png" alt="square logo" class="banner__logo">
+      <div class="content__wrapper">
+        <header class="header">
+          <a class="header__home-button" href="/">
+            <img class="header__logo" src="./assets/lemon_text_logo_green.png" alt="little lemon restaurant logo">
+          </a>
+          <img class="header__menu-toggle" src="./assets/hamburger.png" alt="header menu toggle for slidding menu">
+        </header>
+        
+        <nav class="nav">
+          <img class="nav__menu-toggle" src="./assets/menu-x.png" alt="menu logo">
+          <ul class="nav__nav-bar">
+            <li class="nav__options">
+              <a href="#">HOME</a>
+            </li>
+            <li class="nav__options">
+              <a href="#">MENU</a>
+            </li>
+            <li class="nav__options">
+              <a href="#">ABOUT</a>
+            </li>
+            <li class="nav__options">
+              <a href="#">BOOK</a>
+            </li>
+          </ul>
+        </nav>
+        <main class="main">
+          <section class="main__banner">
+            <article class="banner__text">
+              <div class="banner__wrapper">
+                <img src="./assets/little_lemon_banner--no-logo.jpg" alt="A table with delicious mediteranean dishes" class="banner__img">
+                <img src="./assets/square_logo.png" alt="square logo" class="banner__logo">
+              </div>
+              <h2 class="banner__promo-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ex harum ipsa porro. Aliquid, molestias!</h2>
+            </article>
+          </section>
+          <section class="main__cards">
+            <div class="main__card">
+              <h3 class="card__header">Our Menu</h3>
+              <img src="./assets/images/menu.jpg" alt="Meze Platter from Little Lemon" class="card__img">
+              <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?</p>
             </div>
-            <h2 class="banner__promo-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ex harum ipsa porro. Aliquid, molestias!</h2>
-          </article>
-
-        </section>
-
-        <section class="main__cards">
-
-          <div class="main__card">
-            <h3 class="card__header">Our Menu</h3>
-            <img src="./assets/images/menu.jpg" alt="Meze Platter from Little Lemon" class="card__img">
-            <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?</p>
+        
+            <div class="main__card">
+              <h3 class="card__header">Book A Table</h3>
+              <img src="./assets/images/interior.jpg" alt="The interior of the Little Lemon restaurant" class="card__img">
+              <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?</p>
+            </div>
+        
+            <div class="main__card">
+              <h3 class="card__header">Opening Hours</h3>
+              <img src="./assets/images/opening_hours.jpg" alt="Restaurant Open Sign" class="card__img">
+              <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?</p>
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+          <div class="footer__content">
+            <div class="footer__left">
+              <img class="footer__logo" src="./assets/lemon_text_logo_green.png" alt="">
+            </div>
+        
+            <div class="footer__right">
+              <p class="footer__copyright">&copy; Little Lemon Restaurant <span id="year"></span></p>
+            </div>
           </div>
-          
-          <div class="main__card">
-            <h3 class="card__header">Book A Table</h3>
-            <img src="./assets/images/interior.jpg" alt="The interior of the Little Lemon restaurant" class="card__img">
-            <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?</p>
-          </div>
-          
-          <div class="main__card">
-            <h3 class="card__header">Opening Hours</h3>
-            <img src="./assets/images/opening_hours.jpg" alt="Restaurant Open Sign" class="card__img">
-            <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?</p>
-          </div>
-
-        </section>
-
-      </main>
-
-      <footer class="footer">
-
-        <div class="footer__content">
-
-          <div class="footer__left">
-            <img class="footer__logo" src="./assets/lemon_text_logo_green.png" alt="">
-          </div>
-          
-          <div class="footer__right">
-            <p class="footer__copyright">&copy; Little Lemon Restaurant <span id="year"></span></p>
-          </div>
-
-        </div>
-
-      </footer>
+        </footer>
+      </div>
     <script src="./index.js"></script>
   </body>
 </html>
