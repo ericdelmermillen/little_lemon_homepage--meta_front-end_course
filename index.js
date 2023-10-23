@@ -43,6 +43,7 @@ window.onscroll = function() {
   } 
   else if(innerWidth < 768){
     nav.style.height = '100vh';
+    nav.classList.remove('show');
     if(prevScrollPos > currentScrollPos) {
       header.style.top = "0";
     } else {
