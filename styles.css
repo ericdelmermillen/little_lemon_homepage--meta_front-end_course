@@ -20,8 +20,8 @@
 }
 
 html {
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -51,7 +51,7 @@ a {
   height: 6rem;
   justify-content: center;
   position: sticky;
-  transition: top 600ms ease;
+  transition: all 600ms ease;
   z-index: 2;
 }
 
@@ -86,25 +86,23 @@ a {
   margin-left: 100vw;
   margin-top: -6rem;
   top: 0;
-  transition: top 0;
   transition: all 600ms ease;
   /* width: 60%; */
   width: 0;
-  /* display: none; */
   z-index: 2;
 }
 
 .nav.show {
-  width: 60%;
   /* right: 0;*/
   display: block;
   margin-left: 40vw;
   transition: all 450ms ease-out;
+  width: 60%;
 }
 
 .nav__inner-content {
-  transition: all 450ms ease-out;
   display: none;
+  transition: all 450ms ease-out;
 }
 
 .nav.show > .nav__inner-content {
@@ -117,9 +115,9 @@ a {
 .nav__menu-toggle {
   cursor: pointer;
   height: 1.25rem;
+  left: 50%;
   position: absolute;
   top: 2.25rem;
-  left: 50%;
   transform: translateX(-50%);
 }
 
@@ -150,7 +148,7 @@ a {
   font-family: var(--body-font);
   margin-top: -100vh;
   margin-top: calc(100vh -6rem);
-  padding-top: 4rem;
+  padding-top: 6rem;
 }
 
 .main__banner {
@@ -231,8 +229,8 @@ a {
 }
 
 .card__img {
-  height: 22rem;
   border-radius: 15px;
+  height: 22rem;
   max-width: 100%;
   object-fit: cover;
   object-position: center center;
@@ -301,8 +299,8 @@ a {
     margin-left: 0;
     margin-top: 6rem;
     position: sticky;
-    transition: top 850ms ease;
     top: -2rem;
+    transition: top 600ms ease;
     width: 100%;
     z-index: 1;
   }
@@ -325,10 +323,10 @@ a {
   
   .main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    min-height: calc(100vh - (14rem));
     margin-inline: auto;
-    max-width: var(--max-width);
     margin-top: 0;
+    max-width: var(--max-width);
+    min-height: calc(100vh - (14rem));
     padding-top: 0;
   }
   
@@ -376,7 +374,6 @@ a {
   }
 
   .banner__logo {
-    width: 12rem;
     width: 10rem;
   }
 
