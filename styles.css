@@ -76,13 +76,14 @@ a {
   background-color: var(--accent-green-color);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex-grow: 1;
+  height: 100dvh;
   justify-content: center;
   position: fixed;
   right: -60%;
   top: 0;
   transition: top 0;
-  transition: right 850ms ease;
+  transition: right 600ms ease;
   width: 60%;
   z-index: 2;
 }
