@@ -54,11 +54,11 @@ window.onscroll = function() {
 
 window.addEventListener('resize', () => {
   if(innerWidth < 768) {
-    console.log("mobile")
     nav.style.height = '100dvh';
+    nav.style.top = "0";
   } else if (innerWidth >= 768) {
     nav.style.height = "4rem";
-    console.log("tablet/desktop")
+    nav.style.top = "-2rem";
   }
 });
 
