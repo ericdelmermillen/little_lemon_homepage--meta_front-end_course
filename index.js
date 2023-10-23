@@ -33,6 +33,7 @@ window.onscroll = function() {
   // setSideNavHeight();
   
   if(innerWidth >= 768) {
+    nav.style.height = '4rem';
     if(prevScrollPos > currentScrollPos) {
       nav.style.top = "6rem";
       nav.classList.remove('show');
@@ -43,6 +44,7 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
   } 
   else if(innerWidth < 768){
+    nav.style.height = '100vh';
     if(prevScrollPos > currentScrollPos) {
       header.style.top = "0";
     } else {
