@@ -77,8 +77,9 @@ a {
   /* background-color: red; */
   display: flex;
   flex-direction: column;
-  height: 100dvh;
-  height: calc(100vh - var(--browser-chrome-height)); 
+  /* height: 100dvh; */
+  height: 105vh;
+  /* height: calc(100vh - var(--browser-chrome-height));  */
   justify-content: center;
   position: fixed;
   right: -60%;

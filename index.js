@@ -50,21 +50,6 @@ window.onscroll = function() {
   }
 }
 
-function setSideNavHeight() {
-  const browserChromeHeight = window.innerHeight - document.documentElement.clientHeight;
-  document.documentElement.style.setProperty('--browser-chrome-height', `${browserChromeHeight}px`);
-}
-
-window.addEventListener('scroll', () => {
-  setSideNavHeight();
-});
-
-setSideNavHeight();
-
-const browserChromeHeight = window.innerHeight - document.documentElement.clientHeight;
-document.documentElement.style.setProperty('--browser-chrome-height', `${browserChromeHeight}px`);
-
-
 const year = document.getElementById('year');
   
 const thisYear = new Date().getFullYear();
