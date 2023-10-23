@@ -29,8 +29,6 @@ document.body.addEventListener("click", (event) => {
 window.onscroll = function() {
   let currentScrollPos = window.scrollY;
   nav.style.top = "0";
-  console.log("first")
-  // setSideNavHeight();
   
   if(innerWidth >= 768) {
     nav.style.height = '4rem';
@@ -54,16 +52,15 @@ window.onscroll = function() {
   }
 }
 
-// function setSideNavHeight() {
-//   const browserChromeHeight = window.innerHeight - document.documentElement.clientHeight;
-//   document.documentElement.style.setProperty('--browser-chrome-height', `${browserChromeHeight}px`);
-// }
-
-// setSideNavHeight();
-
-// const browserChromeHeight = window.innerHeight - document.documentElement.clientHeight;
-// document.documentElement.style.setProperty('--browser-chrome-height', `${browserChromeHeight}px`);
-
+window.addEventListener('resize', () => {
+  if(innerWidth < 768) {
+    console.log("mobile")
+    nav.style.height = '100vh';
+  } else if (innerWidth >= 768) {
+    console.log("tablet/desktop")
+    nav.style.height = "4rem";
+  }
+});
 
 const year = document.getElementById('year');
   
