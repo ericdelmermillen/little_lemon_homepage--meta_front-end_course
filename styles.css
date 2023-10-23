@@ -21,7 +21,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +28,7 @@ body {
   color: var(--flat-black-color);
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 ul, 
