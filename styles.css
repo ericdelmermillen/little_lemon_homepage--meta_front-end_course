@@ -26,8 +26,8 @@ html {
 body {
   background: var(--main-backing-color);
   color: var(--flat-black-color);
-  /* display: flex; */
-  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
 }
 
 ul, 
