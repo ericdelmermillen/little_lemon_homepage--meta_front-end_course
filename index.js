@@ -34,10 +34,10 @@ window.onscroll = function() {
     nav.style.height = '4rem';
     if(prevScrollPos > currentScrollPos) {
       nav.style.top = "6rem";
-      nav.classList.remove('show');
+      // nav.classList.remove('show');
     } else if (innerWidth > 768){
       nav.style.top = "-4rem";
-      nav.classList.remove('show');
+      // nav.classList.remove('show');
     }
     prevScrollPos = currentScrollPos;
   } 
