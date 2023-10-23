@@ -55,9 +55,8 @@ window.onscroll = function() {
 window.addEventListener('resize', () => {
   if(innerWidth < 768) {
     console.log("mobile")
-    nav.style.minHeight = '100dvh';
+    nav.style.height = '100dvh';
   } else if (innerWidth >= 768) {
-    nav.style.minHeight = 'auto';
     nav.style.height = "4rem";
     console.log("tablet/desktop")
   }
