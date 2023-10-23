@@ -21,7 +21,6 @@
 
 html {
   scroll-behavior: smooth;
-  min-height: 100dvh;
 }
 
 body {
@@ -29,7 +28,6 @@ body {
   color: var(--flat-black-color);
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
 }
 
 ul, 
@@ -80,7 +78,6 @@ a {
   flex-direction: column;
   height: 100dvh;
   justify-content: center;
-  min-height: 100dvh;
   position: fixed;
   right: -60%;
   top: 0;
@@ -89,6 +86,7 @@ a {
   transition: right 850ms ease;
   width: 60%;
   z-index: 2;
+  flex-grow: 1;
 }
 
 .nav.show {
