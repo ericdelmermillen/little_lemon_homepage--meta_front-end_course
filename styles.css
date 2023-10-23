@@ -83,7 +83,9 @@ a {
   height: calc(100vh - var(--browser-chrome-height)); 
   justify-content: center;
   position: fixed;
+  position: sticky;
   right: -60%;
+  right: 0;
   top: 0;
   bottom: 0;
   transition: top 0;
