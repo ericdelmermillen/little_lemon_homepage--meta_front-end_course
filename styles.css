@@ -79,17 +79,23 @@ a {
   height: 100dvh;
   justify-content: center;
   position: fixed;
+  
+  position: sticky;
+  margin-left: 100vw;
+  margin-top:-6rem;
+
   right: -60%;
   top: 0;
   bottom: 0;
-  transition: top 0;
-  transition: right 850ms ease;
+  /* transition: top 0; */
+  transition: all 600ms ease;
   width: 60%;
   z-index: 2;
   flex-grow: 1;
 }
 
 .nav.show {
+  margin-left: 40vw;
   right: 0;
 }
 
@@ -125,6 +131,7 @@ a {
   display: flex;
   flex-direction: column;
   font-family: var(--body-font);
+  margin-top: -100vh;
 }
 
 .main__banner {
