@@ -13,16 +13,9 @@ let prevScrollPos = window.scrollY;
 //   window.scrollTo(0, 0);
 // };
 
-window.onload = function() {
-  setTimeout(function() {
-    window.scrollTo(0, 1);
-  }, 1000);
-  setTimeout(function() {
-    window.scrollTo(0, 0);
-  }, 1000);
-};
-
-
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(() => window.scrollTo(0, 0));
+}, 0);
 
 
 headerMenuToggle.addEventListener('click',() => {
