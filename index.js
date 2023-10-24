@@ -12,12 +12,14 @@ let prevScrollPos = window.scrollY;
 window.onload = () => {
   setTimeout(() => {
     window.scrollTo(0, 1000)}, 500);
+      setTimeout(() => {
+        window.scrollTo(0, 0)}, 1000);
 };
 
-window.onload = () => {
-  setTimeout(() => {
-    window.scrollTo(0, 0)}, 1000);
-};
+// window.onload = () => {
+//   setTimeout(() => {
+//     window.scrollTo(0, 0)}, 1000);
+// };
 
 
 headerMenuToggle.addEventListener('click',() => {
