@@ -11,24 +11,26 @@ let prevScrollPos = window.scrollY;
 
 const isAndroid = /Android/.test(navigator.userAgent);
 
-// window.onload = () => {
-//   setTimeout(() => {
-//     window.scrollTo(0, 5)}, 500);
-    
-//     setTimeout(() => {
-//       window.scrollTo(0, 0)}, 750);
-// };
+window.onload = () => {
+  if(isAndroid) {
+    setTimeout(() => {
+      window.scrollTo(0, 5)}, 500);
       
-if (isAndroid) {
-  setTimeout(() => {
-    window.scrollTo(0, 5)}, 500);
       setTimeout(() => {
         window.scrollTo(0, 0)}, 750);
-        console.log("This is an Android device.");
-} else {
-  // Execute code for non-Android devices
-  console.log("This is not an Android device.");
-}
+  }
+};
+      
+// if (isAndroid) {
+//   setTimeout(() => {
+//     window.scrollTo(0, 5)}, 500);
+//       setTimeout(() => {
+//         window.scrollTo(0, 0)}, 750);
+//         console.log("This is an Android device.");
+// } else {
+//   // Execute code for non-Android devices
+//   console.log("This is not an Android device.");
+// }
 
 
 
