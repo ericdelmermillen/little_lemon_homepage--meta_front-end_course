@@ -9,9 +9,14 @@ const navOptions = document.querySelectorAll(".nav__options");
 const windowWidth = window.innerWidth;
 let prevScrollPos = window.scrollY;
 
-window.onload = function() {
+// window.onload = function() {
+//   window.scrollTo(0, 0);
+// };
+
+document.addEventListener("DOMContentLoaded", function() {
   window.scrollTo(0, 0);
-};
+});
+
 
 
 headerMenuToggle.addEventListener('click',() => {
