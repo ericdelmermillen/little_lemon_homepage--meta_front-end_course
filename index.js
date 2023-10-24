@@ -14,6 +14,11 @@ window.onload = function() {
     window.scrollTo(0, 1000)}, 1000);
 };
 
+window.onload = function() {
+  setTimeout(() => {
+    window.scrollTo(0, 0)}, 1000);
+};
+
 
 headerMenuToggle.addEventListener('click',() => {
   nav.classList.add('show');
