@@ -9,12 +9,12 @@ const navOptions = document.querySelectorAll(".nav__options");
 const windowWidth = window.innerWidth;
 let prevScrollPos = window.scrollY;
 
-window.onload = function() {
+window.onload = () => {
   setTimeout(() => {
-    window.scrollTo(0, 1000)}, 1000);
+    window.scrollTo(0, 1000)}, 500);
 };
 
-window.onload = function() {
+window.onload = () => {
   setTimeout(() => {
     window.scrollTo(0, 0)}, 1000);
 };
