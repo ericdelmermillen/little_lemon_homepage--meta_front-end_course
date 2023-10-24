@@ -13,9 +13,17 @@ let prevScrollPos = window.scrollY;
 //   window.scrollTo(0, 0);
 // };
 
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(() => window.scrollTo(0, 0));
-}, 0);
+// document.addEventListener("DOMContentLoaded", function() {
+//   setTimeout(() => window.scrollTo(0, 0));
+// }, 0);
+
+window.onload = function() {
+  window.requestAnimationFrame(() => {
+    console.log("first")
+    window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
+  });
+};
 
 
 headerMenuToggle.addEventListener('click',() => {
