@@ -34,10 +34,8 @@ window.onscroll = function() {
     nav.style.height = '4rem';
     if(prevScrollPos > currentScrollPos) {
       nav.style.top = "6rem";
-      // nav.classList.remove('show');
     } else if (innerWidth > 768){
       nav.style.top = "-4rem";
-      // nav.classList.remove('show');
     }
     prevScrollPos = currentScrollPos;
   } 
@@ -56,7 +54,6 @@ window.addEventListener('resize', () => {
   if(innerWidth < 768) {
     nav.style.height = '100dvh';
     nav.style.top = "0";
-    // nav.classList.remove('show')
   } else if (innerWidth >= 768) {
     nav.style.height = "4rem";
     nav.style.top = "-2rem";
