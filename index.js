@@ -11,7 +11,7 @@ let prevScrollPos = window.scrollY;
 
 window.onload = () => {
   setTimeout(() => {
-    window.scrollTo(0, 5)}, 500);
+    window.scrollTo(0, 0)}, 500);
       setTimeout(() => {
         window.scrollTo(0, 0)}, 750);
 };
