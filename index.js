@@ -13,9 +13,12 @@ let prevScrollPos = window.scrollY;
 //   window.scrollTo(0, 0);
 // };
 
-document.addEventListener("DOMContentLoaded", function() {
-  window.scrollTo(0, 0);
-});
+window.onload = function() {
+  setTimeout(function() {
+    window.scrollTo(0, 0);
+  }, 100);
+};
+
 
 
 
