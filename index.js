@@ -9,17 +9,27 @@ const navOptions = document.querySelectorAll(".nav__options");
 const windowWidth = window.innerWidth;
 let prevScrollPos = window.scrollY;
 
-window.onload = () => {
+const isAndroid = /Android/.test(navigator.userAgent);
+
+// window.onload = () => {
+//   setTimeout(() => {
+//     window.scrollTo(0, 5)}, 500);
+    
+//     setTimeout(() => {
+//       window.scrollTo(0, 0)}, 750);
+// };
+      
+if (isAndroid) {
   setTimeout(() => {
     window.scrollTo(0, 5)}, 500);
       setTimeout(() => {
         window.scrollTo(0, 0)}, 750);
-};
+        console.log("This is an Android device.");
+} else {
+  // Execute code for non-Android devices
+  console.log("This is not an Android device.");
+}
 
-// window.onload = () => {
-//   setTimeout(() => {
-//     window.scrollTo(0, 0)}, 1000);
-// };
 
 
 headerMenuToggle.addEventListener('click',() => {
