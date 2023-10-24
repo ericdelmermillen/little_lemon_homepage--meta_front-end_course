@@ -23,9 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
 //   nav.style.top = "0";
 // })
 
-window.onload = function() {
+window.onload = () => {
   window.requestAnimationFrame(() => {
     console.log("first")
+    window.scrollTo(100, 0);
     window.scrollTo(0, 0);
   });
 };
