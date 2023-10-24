@@ -18,18 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
 }, 0);
 
 
-// headerMenuToggle.addEventListener('click',() => {
-//   nav.classList.add('show');
-//   nav.style.top = "0";
-// })
-
-window.onload = () => {
-  window.requestAnimationFrame(() => {
-    console.log("first")
-    window.scrollTo(100, 0);
-    window.scrollTo(0, 0);
-  });
-};
+headerMenuToggle.addEventListener('click',() => {
+  nav.classList.add('show');
+  nav.style.top = "0";
+})
 
 
 navMenuToggle.addEventListener('click',() => nav.classList.remove('show'));
