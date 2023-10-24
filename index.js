@@ -13,7 +13,7 @@ window.onload = () => {
   setTimeout(() => {
     window.scrollTo(0, 100)}, 500);
       setTimeout(() => {
-        window.scrollTo(0, 0)}, 550);
+        window.scrollTo(0, 0)}, 1000);
 };
 
 // window.onload = () => {
