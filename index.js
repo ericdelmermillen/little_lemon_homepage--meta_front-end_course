@@ -22,7 +22,7 @@ const scrollFix = () => {
   }
 }
 
-window.onload = () => scrollFix;
+window.onload = () => scrollFix();
 
 headerMenuToggle.addEventListener('click',() => {
   nav.classList.add('show');
