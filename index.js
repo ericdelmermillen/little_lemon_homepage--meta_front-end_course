@@ -12,7 +12,7 @@ let prevScrollPos = window.scrollY;
 const isAndroid = /Android/.test(navigator.userAgent);
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
-window.onload = () => {
+const scrollFix = () => {
   if(isAndroid || isIOS) {
     setTimeout(() => {
       window.scrollTo(0, 5)}, 500);
@@ -20,7 +20,9 @@ window.onload = () => {
       setTimeout(() => {
         window.scrollTo(0, 0)}, 750);
   }
-};
+}
+
+window.onload = () => scrollFix;
 
 headerMenuToggle.addEventListener('click',() => {
   nav.classList.add('show');
