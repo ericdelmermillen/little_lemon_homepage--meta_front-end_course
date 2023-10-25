@@ -10,9 +10,10 @@ const windowWidth = window.innerWidth;
 let prevScrollPos = window.scrollY;
 
 const isAndroid = /Android/.test(navigator.userAgent);
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
 window.onload = () => {
-  if(isAndroid) {
+  if(isAndroid || isIOS) {
     setTimeout(() => {
       window.scrollTo(0, 5)}, 500);
       
