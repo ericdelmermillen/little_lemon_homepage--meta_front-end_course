@@ -83,20 +83,16 @@ a {
   flex-grow: 1;
   height: 100dvh;
   justify-content: center;
-  /* position: fixed; */
   position: sticky;
-  /* right: -60%; */
   margin-left: 100vw;
   margin-top: -6rem;
   top: 0;
   transition: all 600ms ease;
-  /* width: 60%; */
   width: 0;
   z-index: 2;
 }
 
 .nav.show {
-  /* right: 0;*/
   display: block;
   margin-left: 40vw;
   transition: all 450ms ease-out;
